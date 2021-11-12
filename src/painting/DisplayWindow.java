@@ -11,6 +11,7 @@ public class DisplayWindow extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		add(new Draw());
 		setSize(1400,800);
+		setResizable(false);
 		setVisible(true);
 		setTitle("DVD Screensaver");
 		
