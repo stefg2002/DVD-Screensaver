@@ -1,4 +1,4 @@
-# DVD-Screensaver
+# DVD Screensaver
 
 Uses JFrame, JPanel and ActionListener to create a DVD logo that bounces around the screen.
 
