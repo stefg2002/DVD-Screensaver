@@ -25,7 +25,7 @@ public class Draw extends JPanel implements ActionListener{
 	Random r = new Random();
 	Timer t = new Timer(2,this);
 	
-	int x=r.nextInt(1251-1)+1, y=r.nextInt(686-1)+1, velX = 3, velY = 3, cornerCount, count;
+	int x=r.nextInt(1251-1)+1, y=r.nextInt(686-1)+1, velX = 1, velY = 1, cornerCount, count;
 
 	public ImageObserver IO;
 	public Image image;
