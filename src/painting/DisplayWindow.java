@@ -6,6 +6,9 @@ public class DisplayWindow extends JFrame{
 	
 	public static final long serialVersionUID = 1L;
 
+	/**
+	 * Constructor for the main class which sets up the JFrame GUI
+	 */
 	public DisplayWindow() {
 	
 		setDefaultCloseOperation(EXIT_ON_CLOSE);

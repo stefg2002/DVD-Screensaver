@@ -30,6 +30,9 @@ public class Draw extends JPanel implements ActionListener{
 	public ImageObserver IO;
 	public Image image;
 
+	/**
+	 * Default constructor for the 'Draw' class
+	 */
 	public Draw(){
 		
 			try {
@@ -43,7 +46,12 @@ public class Draw extends JPanel implements ActionListener{
 			}
 		
 	}
-	
+
+	/**
+	 * This method overrides the paintComponent method in JComponent, used for
+	 * displaying graphics such as images, shapes and text.
+	 * @param g refers to the object of the Graphics class
+	 */
 	public void paintComponent(Graphics g) {
 		
 		super.paintComponent(g);
@@ -61,7 +69,13 @@ public class Draw extends JPanel implements ActionListener{
 		t.start();
 		
 	}
-	
+
+	/**
+	 * Method is implemented from ActionListener class. Checks if image hits the wall, then it reverses its
+	 * velocity based on the axis that it hit.
+	 * If image hits the corner, then it adds to 'cornerCount'.
+	 * @param e refers to the ActionEvent class.
+	 */
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
@@ -93,7 +107,11 @@ public class Draw extends JPanel implements ActionListener{
 		repaint();
 		
 	}
-	
+
+	/**
+	 * Method is used for creating a custom font from a .ttf file.
+	 * @return retuns the customFont if the file is found, otherwise, returns null.
+	 */
 	public Font customFont() {	
 		
 		try {
@@ -112,7 +130,10 @@ public class Draw extends JPanel implements ActionListener{
 		return null;
 	}
 
-	//Play sound from .ogg file
+	/**
+	 * Method plays a .ogg sound file.
+	 * @param s is the path of the .ogg file
+	 */
 	public void playSound(String s) {
 		
 		try {
@@ -124,10 +145,11 @@ public class Draw extends JPanel implements ActionListener{
 		}catch(Exception e) {}
 		
 	}
-	
-	
 
-	//Chooses random colour for DVD logo
+
+	/**
+	 * Method randomly changes the image, called when image hits the wall.
+	 */
 	public void chooseImage() {
 		
 		int choice = r.nextInt(9-1)+1;
@@ -182,7 +204,11 @@ public class Draw extends JPanel implements ActionListener{
 		
 		
 	}
-	
+
+	/**
+	 * Method changes the path of the image file
+	 * @param s is the path of the .png image file
+	 */
 	public void changeImage(String s) {
 		
 		try {
